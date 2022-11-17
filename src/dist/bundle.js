@@ -2,18 +2,18 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./js/modules/buttons.js":
-/*!*******************************!*\
-  !*** ./js/modules/buttons.js ***!
-  \*******************************/
+/***/ "./src/js/modules/buttons.js":
+/*!***********************************!*\
+  !*** ./src/js/modules/buttons.js ***!
+  \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _cards__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cards */ "./js/modules/cards.js");
-/* harmony import */ var _resources__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./resources */ "./js/modules/resources.js");
+/* harmony import */ var _cards__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cards */ "./src/js/modules/cards.js");
+/* harmony import */ var _resources__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./resources */ "./src/js/modules/resources.js");
 
 
 let known=0;
@@ -184,7 +184,7 @@ function modal(modalSelector){
         cards[cur].style.display='none';
         cur=0;
         cards[cur].style.display='block';
-        (0,_cards__WEBPACK_IMPORTED_MODULE_0__.changeRemainig)(remainigButton,max,cur);
+        max = (0,_cards__WEBPACK_IMPORTED_MODULE_0__.changeRemainig)(remainigButton,max,cur);
 
     });
 
@@ -194,17 +194,17 @@ function modal(modalSelector){
 
 /***/ }),
 
-/***/ "./js/modules/cards.js":
-/*!*****************************!*\
-  !*** ./js/modules/cards.js ***!
-  \*****************************/
+/***/ "./src/js/modules/cards.js":
+/*!*********************************!*\
+  !*** ./src/js/modules/cards.js ***!
+  \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "changeRemainig": () => (/* binding */ changeRemainig)
 /* harmony export */ });
-/* harmony import */ var _resources__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./resources */ "./js/modules/resources.js");
+/* harmony import */ var _resources__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./resources */ "./src/js/modules/resources.js");
 
 function changeRemainig(remainig,max,cur, i=0){
     (0,_resources__WEBPACK_IMPORTED_MODULE_0__.getResources)('http://localhost:3000/words');
@@ -215,10 +215,10 @@ function changeRemainig(remainig,max,cur, i=0){
 
 /***/ }),
 
-/***/ "./js/modules/resources.js":
-/*!*********************************!*\
-  !*** ./js/modules/resources.js ***!
-  \*********************************/
+/***/ "./src/js/modules/resources.js":
+/*!*************************************!*\
+  !*** ./src/js/modules/resources.js ***!
+  \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -318,11 +318,11 @@ __webpack_require__.r(__webpack_exports__);
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!**********************!*\
-  !*** ./js/script.js ***!
-  \**********************/
+/*!*************************!*\
+  !*** ./src/js/index.js ***!
+  \*************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_buttons__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/buttons */ "./js/modules/buttons.js");
+/* harmony import */ var _modules_buttons__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/buttons */ "./src/js/modules/buttons.js");
 
 
 window.addEventListener('DOMContentLoaded',()=>{
